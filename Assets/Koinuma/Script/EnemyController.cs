@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] int _hp;
     [SerializeField] int _hpAmplification;
+    [SerializeField] int _addScore;
     [SerializeField] TextMeshProUGUI _meshPro;
     Rigidbody2D _rb;
 
@@ -24,5 +25,10 @@ public class EnemyController : MonoBehaviour
     {
         _hp -= damage;
         _meshPro.text = _hp.ToString();
+        if (_hp <= 0)
+        {
+            GameManager.instance.AddScore(_addScore);
+            Destroy(gameObject);
+        }
     }
 }

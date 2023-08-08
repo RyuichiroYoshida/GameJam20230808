@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3064335003633211755}
   - component: {fileID: 1668759436591965147}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +165,9 @@ MonoBehaviour:
   _speed: 5
   _hp: 10
   _hpAmplification: 10
+  _addScore: 10
   _meshPro: {fileID: 6895405750923280136}
+  _gameManager: {fileID: 0}
 --- !u!1 &3378836202354540006
 GameObject:
   m_ObjectHideFlags: 0
