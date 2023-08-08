@@ -4,6 +4,8 @@ using UnityEngine;
 public class ItemGenerator : MonoBehaviour
 {
     [SerializeField] GameObject[] _itemPrefabs;
+    [SerializeField] int _itemSpawnChance = 5;
+    [SerializeField] int _spawnWaitTime = 10; 
     void Start()
     {
         StartCoroutine(ItemSpawn());
@@ -11,9 +13,9 @@ public class ItemGenerator : MonoBehaviour
 
     IEnumerator ItemSpawn()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(_spawnWaitTime);
         int r = Random.Range(0, 10);
-        if (r <= 3)
+        if (r <= _itemSpawnChance)
         {
             float randomX = Random.Range(-2, 2);
             print("ItemSpawn");
