@@ -15,13 +15,14 @@ public class BulletController : MonoBehaviour
 
     void BulletDamage()
     {
-        _bulletDamage += GameManager.instance.Score;
+        _bulletDamage += GameManager.instance.Score / 3;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out EnemyController enemy))
         {
+            BulletDamage();
             enemy.Damage(_bulletDamage);
             Destroy(this.gameObject);
         }
