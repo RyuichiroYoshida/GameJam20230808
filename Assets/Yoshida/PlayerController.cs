@@ -11,7 +11,22 @@ public class PlayerController : MonoBehaviour
 
     float _xInput = 0;
 
+    public float MoveSpeed { get => _moveSpeed; set => _moveSpeed = value; }
+    public float ShotDeley { get => _shotDelay; set => _shotDelay = value; }
     public float XInput => _xInput;
+
+    public static PlayerController Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     void Start()
     {
@@ -28,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            GameManager.instance.GameOver();
             Destroy(this);
         }
     }
