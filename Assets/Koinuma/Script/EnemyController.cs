@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject, 5);
         _rb = GetComponent<Rigidbody2D>();
         _rb.velocity = Vector2.down * _speed;
-        _hp *= 1 + (int)Time.time / _hpAmplification;
+        _hp *= 1 + (int)GameManager.instance.Timer / _hpAmplification;
         _meshPro.text = _hp.ToString();
     }
 

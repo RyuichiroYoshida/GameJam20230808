@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public int Score => _score;
+    public float Timer => _timer;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         AddScore(0);
         _gameOverCanvas.SetActive(false);
     }
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0;
         _gameOverCanvas.SetActive(true);
         _gameOverScore.text = "Score\r\n" + _score.ToString("D8");
     }
