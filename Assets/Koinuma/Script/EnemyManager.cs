@@ -5,7 +5,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] GameObject _enemyObject;
     [SerializeField] float _generationInterval;
     [SerializeField] float _generationWigth;
-    float timer;
+    float timer = 10;
 
     private void Update()
     {

@@ -162,9 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89edad0d6cfd0324ba2c434c4373bf2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 2
   _hp: 10
-  _hpAmplification: 10
+  _hpAmplification: 5
   _addScore: 10
   _meshPro: {fileID: 6895405750923280136}
 --- !u!1 &3378836202354540006

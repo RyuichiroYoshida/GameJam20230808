@@ -14,9 +14,9 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 7);
         _rb = GetComponent<Rigidbody2D>();
-        _rb.velocity = Vector2.down * _speed;
+        _rb.velocity = Vector2.down * (_speed + GameManager.instance.Timer / 20);
         _hp *= 1 + (int)GameManager.instance.Timer / _hpAmplification;
         _meshPro.text = _hp.ToString();
     }
