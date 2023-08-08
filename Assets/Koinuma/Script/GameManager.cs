@@ -1,5 +1,4 @@
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,8 +10,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _gameOverScore;
     float _timer = 0;
     int _score = 0;
-
     public static GameManager instance;
+
+    public int Score => _score;
 
     private void Awake()
     {

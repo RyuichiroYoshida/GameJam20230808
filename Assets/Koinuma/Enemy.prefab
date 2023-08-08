@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1668759436591965147}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,6 @@ MonoBehaviour:
   _hpAmplification: 10
   _addScore: 10
   _meshPro: {fileID: 6895405750923280136}
-  _gameManager: {fileID: 0}
 --- !u!1 &3378836202354540006
 GameObject:
   m_ObjectHideFlags: 0
